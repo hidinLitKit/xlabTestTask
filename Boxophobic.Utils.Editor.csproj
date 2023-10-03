@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{35E1F4E4-9F65-3DA2-7B00-25193029DDBB}</ProjectGuid>
+    <ProjectGuid>{30EA4FA3-FCD5-2B84-3C42-4C0F60521669}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Boxophobic.Utils.Editor</AssemblyName>
@@ -56,50 +56,50 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledButtonDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\Constants\Constants.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledDiffusionMaterialDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\LoadSettingsData.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledLayersDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMessageDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMessageDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledEmissiveIntensityDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledBannerDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledInteractiveDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTexturePreviewDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledMonoBehaviourEditor.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledSpaceDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledInteractiveDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledIndentDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledEnumDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMaskDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledScriptableObjectEditor.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledCategoryDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledToggleDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledLayersDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledVectorDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledEnumDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMaskDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIndentDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTextDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowCategory.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledCategoryDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorBanner.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledButtonDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledRangeOptionsDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledBannerDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\SaveSettingsData.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorCategory.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowBanner.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledOptionsSliderDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledRemapSliderDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureSingleLineDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledButtonDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\Constants\Constants.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledDiffusionMaterialDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\SettingsUtils\LoadSettingsData.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledLayersDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMessageDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMessageDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledEmissiveIntensityDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledBannerDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledInteractiveDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTexturePreviewDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMono\StyledMonoBehaviourEditor.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledSpaceDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledInteractiveDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledIndentDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledEnumDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMaskDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMono\StyledScriptableObjectEditor.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledCategoryDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledToggleDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledLayersDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledVectorDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledEnumDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMaskDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIndentDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTextDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowCategory.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledCategoryDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorBanner.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledButtonDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledRangeOptionsDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledBannerDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\SettingsUtils\SaveSettingsData.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorCategory.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowBanner.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledOptionsSliderDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledRemapSliderDrawer.cs" />
+    <Compile Include="Assets\Art\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureSingleLineDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BOXOPHOBIC\Utils\Editor\Boxophobic.Utils.Editor.asmdef" />
+    <None Include="Assets\Art\BOXOPHOBIC\Utils\Editor\Boxophobic.Utils.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -365,6 +365,21 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -765,7 +780,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{800265A8-6FD0-8FD3-888C-7C49ADEC4DCA}</Project>
+      <Project>{AB32F50B-6F88-76CD-8AC9-29694FB8A65C}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
