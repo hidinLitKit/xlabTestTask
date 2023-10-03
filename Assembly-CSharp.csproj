@@ -62,11 +62,13 @@
     <Compile Include="Assets\Art\AlignedGames\Polygonal Foliage Asset Package\Scripts\Utility\FlyCameraBehaviour.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\AttachItem.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\PickedItemProps.cs" />
+    <Compile Include="Assets\Scripts\PlayerActController.cs" />
+    <Compile Include="Assets\Scripts\RainController.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\EndingSeq\PillsBeh.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\ObjectRotation.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\DialogueSetAct.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\FallingRock.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\Interactable.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\EndingSeq\EndEvent.cs" />
     <Compile Include="Assets\Scripts\ToolChange.cs" />
@@ -77,7 +79,6 @@
     <Compile Include="Assets\Scripts\InteractiveSystem\InventoryCreate.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\ItemCanBePicked.cs" />
-    <Compile Include="Assets\Scripts\Rain.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\Dialogue.cs" />
     <Compile Include="Assets\Scripts\FreeCamera.cs" />
   </ItemGroup>

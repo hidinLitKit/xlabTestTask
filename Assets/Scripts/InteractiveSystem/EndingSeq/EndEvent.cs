@@ -39,7 +39,7 @@ public class EndEvent : MonoBehaviour
         GameObject.Find("Ambience").GetComponent<AudioSource>().Stop();
         peacefulMusic.Play();
         GameObject.FindGameObjectWithTag("Player").transform.position = roomTp.transform.position;
-        postpr.profile.GetSetting<Bloom>().intensity.Override(8f);
+        postpr.profile.GetSetting<Bloom>().intensity.Override(8f); // ошибка 
         
         
 

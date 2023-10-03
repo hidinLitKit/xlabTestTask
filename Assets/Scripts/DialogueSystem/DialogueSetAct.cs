@@ -34,7 +34,7 @@ public class DialogueSetAct : MonoBehaviour
         switch(op)
         {
             case npcType.Farmer:
-            if (requir== false && cloud.GetComponent<Rain>().npcNum==3)
+            if (requir== false && cloud.GetComponent<RainController>().npcNum==3)
             {
                 requir = true;
                 DialogueSwitch();
@@ -42,7 +42,7 @@ public class DialogueSetAct : MonoBehaviour
             }
             break;
             case npcType.Miner:
-            if(requir == false && task3.GetComponent<FallingRock>().rockCount==3)
+            if(requir == false && task3.GetComponent<Spawner>().rockCount==3)
             {
                 requir = true;
                 DialogueSwitch();
