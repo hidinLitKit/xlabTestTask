@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DialogueSetAct : MonoBehaviour
 {
-    private GameObject cloud;
     private GameObject task3;
     private string requireName;
     public enum npcType
@@ -20,7 +19,6 @@ public class DialogueSetAct : MonoBehaviour
     private bool requir = false;
     void Start()
     {
-        cloud = GameObject.Find("rain_cloud");
         task3 = GameObject.Find("Задание 3");
         requireName = "VillagerPickaxe";
     }
@@ -34,7 +32,7 @@ public class DialogueSetAct : MonoBehaviour
         switch(op)
         {
             case npcType.Farmer:
-            if (requir== false && cloud.GetComponent<RainController>().npcNum==3)
+            if (requir== false && task3.GetComponent<RainController>().npcNum==3)
             {
                 requir = true;
                 DialogueSwitch();

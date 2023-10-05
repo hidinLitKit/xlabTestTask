@@ -8,6 +8,7 @@ namespace TestXlab
     {
         public Spawner spawner;
         public RainController rainController;
+        public ToolChange toolChange;
         private void Update()
         {
             if(Input.GetKeyDown(KeyCode.X))
@@ -20,7 +21,7 @@ namespace TestXlab
             }
             if(Input.GetKeyDown(KeyCode.Space)) 
             {
-
+                toolChange.MakeChange();
             }
         }
     }

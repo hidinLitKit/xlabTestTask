@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 867313193}
-  m_IndirectSpecularColor: {r: 0.24285308, g: 0.26212665, b: 0.28909907, a: 1}
+  m_IndirectSpecularColor: {r: 0.24285302, g: 0.26212686, b: 0.28909913, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4877,6 +4877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerPickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4946,6 +4950,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
       propertyPath: m_Name
       value: VillagerPlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
       propertyPath: m_RootOrder
@@ -15913,6 +15921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerPlow
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -24971,6 +24983,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
       propertyPath: m_Name
       value: VillagerFishingPole
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
       propertyPath: m_RootOrder
@@ -38474,6 +38490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerPickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -40128,6 +40148,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerFishingPole
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -40590,9 +40614,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2107170709}
     - target: {fileID: 713301881722380507, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: toolChange
+      value: 
+      objectReference: {fileID: 2107170710}
+    - target: {fileID: 713301881722380507, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: rainController
       value: 
-      objectReference: {fileID: 1022963115}
+      objectReference: {fileID: 2107170711}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -42635,7 +42663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.4
+      value: 150.56
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42643,7 +42671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.8
+      value: -10.66
       objectReference: {fileID: 0}
     - target: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42683,98 +42711,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1800586061}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1898942825508036, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022963118}
-    - targetCorrespondingSourceObject: {fileID: 1898942825508036, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022963119}
-    - targetCorrespondingSourceObject: {fileID: 1898942825508036, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1022963115}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
 --- !u!4 &1022963113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4241627824473718, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
   m_PrefabInstance: {fileID: 1022963112}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1022963114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1898942825508036, guid: 89183a5c31b1c1b4f89c7e21d8ca741c, type: 3}
-  m_PrefabInstance: {fileID: 1022963112}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1022963115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022963114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78774e19be35d164598343ba4d7ab4d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC:
-  - {fileID: 7848397494944616867}
-  - {fileID: 1353127366}
-  - {fileID: 2916151947902129306}
-  - {fileID: 2916151948392805703}
-  - {fileID: 254373353446668758}
-  - {fileID: 1748567373}
-  rainDrops: {fileID: 1800586060}
-  npcNum: 0
-  moveSpeed: 6
-  fogs: 0
---- !u!54 &1022963118
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022963114}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &1022963119
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022963114}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 8.379882
-  m_Center: {x: 0.18423653, y: -11.173486, z: 0.44801617}
 --- !u!1 &1024095421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1612273161005096, guid: ae9772ea62bbc724eb9b8ef81109f733, type: 3}
@@ -47362,6 +47305,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_Name
       value: VillagerHammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_RootOrder
@@ -55605,6 +55552,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_Name
       value: VillagerHammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_RootOrder
@@ -63953,6 +63904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerFishingPole
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -70442,6 +70397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerFishingPole
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 017808b5a05937c4d87dfb2f5b02bc2b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -73588,6 +73547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerPickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -74000,6 +73963,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_Name
       value: VillagerHammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_RootOrder
@@ -74423,6 +74390,8 @@ GameObject:
   - component: {fileID: 1800586061}
   - component: {fileID: 1800586063}
   - component: {fileID: 1800586062}
+  - component: {fileID: 1800586065}
+  - component: {fileID: 1800586064}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -79240,6 +79209,41 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!135 &1800586064
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800586060}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 8.379882
+  m_Center: {x: 0.18423653, y: -11.173486, z: 0.44801617}
+--- !u!114 &1800586065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800586060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267fd1a256a338c47bf826c9ba9ea4fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderFogDist: 0
+  RainDrops: {fileID: 1800586060}
 --- !u!64 &1800841057
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -84991,6 +84995,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
       propertyPath: m_Name
       value: VillagerPickaxe
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a84dc411a82bf8b43b867806726efddc, type: 3}
       propertyPath: m_RootOrder
@@ -92261,6 +92269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerHammer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee8809e804fcc814ba55fe33f373281a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -93106,6 +93118,7 @@ GameObject:
   - component: {fileID: 2107170708}
   - component: {fileID: 2107170709}
   - component: {fileID: 2107170710}
+  - component: {fileID: 2107170711}
   m_Layer: 6
   m_Name: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 3"
   m_TagString: Untagged
@@ -93167,6 +93180,30 @@ MonoBehaviour:
   - {fileID: 1757534003}
   - {fileID: 1333496874}
   - {fileID: 702288653}
+--- !u!114 &2107170711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107170707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78774e19be35d164598343ba4d7ab4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCs:
+  - {fileID: 7848397494944616868}
+  - {fileID: 1367782378}
+  - {fileID: 2916151947902129309}
+  - {fileID: 2916151948392805696}
+  - {fileID: 254373353446668753}
+  - {fileID: 885835524}
+  cloud: {fileID: 1022963113}
+  particles: {fileID: 1800586065}
+  moveSpeed: 6
+  targetFramerate: 60
+  npcNum: 0
 --- !u!1 &2107477005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1458573784885960, guid: 6910e2407cd484a42a0c2598114751a0, type: 3}
@@ -93205,6 +93242,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
       propertyPath: m_Name
       value: VillagerPlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 370782fdfcf1fbe42b2cd21bf23903dd, type: 3}
       propertyPath: m_RootOrder
