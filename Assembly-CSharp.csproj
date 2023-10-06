@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\InteractiveSystem\EndingSeq\PillsBeh.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\ObjectRotation.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\GolfGame\LevelController.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\DialogueSetAct.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\ParticlesController.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\InteractiveSystem\OpenInventory.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\EndingSeq\Ending.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\InventoryCreate.cs" />
+    <Compile Include="Assets\Scripts\GolfGame\GameController.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\ItemCanBePicked.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\Dialogue.cs" />

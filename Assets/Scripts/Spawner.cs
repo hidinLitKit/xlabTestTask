@@ -11,17 +11,14 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        if(!CD) {
             var prefab = getRandomPrefab();
             if (prefab == null)
             {
                 Debug.Log("No prefab");
                 return;
             }
-            Instantiate(prefab, spawnPoint.transform.localPosition, spawnPoint.transform.localRotation);
+            Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
             rockCount++;
-            StartCoroutine(CoolDown());
-        }
         
     }
     private GameObject getRandomPrefab()
