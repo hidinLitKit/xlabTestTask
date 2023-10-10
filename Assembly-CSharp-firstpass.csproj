@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{004A1862-673D-2917-F9BF-6659315B165F}</ProjectGuid>
+    <ProjectGuid>{0574690E-44AA-D48A-8D27-1A4127ADC207}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -784,15 +784,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{AB32F50B-6F88-76CD-8AC9-29694FB8A65C}</Project>
+      <Project>{5C7E736F-7F69-B820-1BA3-220C0C1C0D30}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{30AAFC6E-C952-BAB1-A6ED-E18C245B1FC5}</Project>
+      <Project>{386B5737-B539-DEB7-19A8-23A5233127FC}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{30EA4FA3-FCD5-2B84-3C42-4C0F60521669}</Project>
+      <Project>{A947D129-291B-3E35-5AA0-4A69F6C4D722}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
   </ItemGroup>

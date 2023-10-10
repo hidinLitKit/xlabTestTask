@@ -36,17 +36,17 @@ namespace Golf
             m_ForceXString = "0";
             m_ForceYString = "0";
 
-            m_StartPos = transform.position;
+            //m_StartPos = transform.position;
             m_StartForce = m_Rigidbody.transform.position;
             //m_StartRot = m_Rigidbody.transform.rotation;
         }
         private void Update()
         {
-            if(Input.GetKey(KeyCode.E))
+            if(Input.GetKey(KeyCode.E) && !isEndReached())
             {
                 m_ModeSwitching = ModeSwitching.HitAccelerate;
             }
-            if(Input.GetKeyUp(KeyCode.E))
+            if(Input.GetKeyUp(KeyCode.E) )
             {
                 m_ModeSwitching = ModeSwitching.ReturnPosition;
             }
@@ -69,7 +69,6 @@ namespace Golf
                 case ModeSwitching.Start:
                     //This resets the GameObject and Rigidbody to their starting positions
                    // transform.position = m_StartPos;
-                    
                     //m_Rigidbody.transform.position = m_StartForce;
                     //m_Rigidbody.transform.rotation = m_StartRot;
                     m_Rigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
@@ -80,22 +79,24 @@ namespace Golf
                 case ModeSwitching.HitAccelerate:
                     //MakeCustomForce();
                     //m_Rigidbody.AddForce(m_NewForce, ForceMode.Acceleration);
-                    m_Rigidbody.AddTorque(-acsForce, 0, 0, ForceMode.Acceleration);
                     if (isEndReached()) m_ModeSwitching = ModeSwitching.End;
+                    else m_Rigidbody.AddTorque(-acsForce, 0, 0, ForceMode.Impulse);
+                    
                         break;
                 case ModeSwitching.ReturnPosition:
-                    m_Rigidbody.AddTorque(acsForce,0,0,ForceMode.Acceleration);
                     if (isStartReached()) m_ModeSwitching = ModeSwitching.Start;
+                    m_Rigidbody.AddTorque(acsForce,0,0,ForceMode.Impulse);
+                    
                     break;
                 case ModeSwitching.End:
-                    m_Rigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
+                    m_Rigidbody.AddTorque(acsForce*1.5f, 0, 0, ForceMode.Impulse);
                     break;
             }
         }
 
         bool isEndReached()
         {
-            return m_Rigidbody.rotation.x > EndPoint.x ;
+            return m_Rigidbody.rotation.x > EndPoint.x;
 
         }
         bool isStartReached()

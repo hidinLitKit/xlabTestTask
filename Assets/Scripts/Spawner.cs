@@ -33,10 +33,4 @@ public class Spawner : MonoBehaviour
         return prefab;
         
     }
-    IEnumerator CoolDown()
-    {
-        CD = !CD;
-        yield return new WaitForSeconds(1f);
-        CD = !CD;
-    }
 }
