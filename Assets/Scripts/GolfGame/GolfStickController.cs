@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace Golf
+    
 {
     public class GolfStickController : MonoBehaviour
     {
+        //скрипт умер не используется
         //Use to switch between Force Modes
         enum ModeSwitching { Start, HitAccelerate, ReturnPosition, End };
         ModeSwitching m_ModeSwitching;
