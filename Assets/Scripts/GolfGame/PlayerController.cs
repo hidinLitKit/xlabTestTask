@@ -20,7 +20,7 @@ namespace Golf
         }
         public void OnUp()
         {
-            player.SetDown(false);
+            player.SetDown(false                                                                                                                                                                                                                                                                                                                                                                                                                                );
         }
 
     }

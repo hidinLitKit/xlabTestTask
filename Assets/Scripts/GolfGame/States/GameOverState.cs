@@ -5,6 +5,6 @@ namespace Golf
 {
     public class GameOverState : GameState
     {
-    }
 
+    }
 }
