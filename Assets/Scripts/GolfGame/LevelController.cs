@@ -27,16 +27,15 @@ namespace Golf
         }
         void Start()
         {
-            
-            StartCoroutine(SpawnStoneProc());
-
             //Stone.onCollisionStone += GameOver; //подписка на метод
             //желательно это делать OnEnable, OnDisable, для контроля подписки,отписки
         }
         private void OnEnable()
         {
             Stone.onCollisionStone += GameOver;
+            Stone.onCollisionStone += UIcon.manageGameOverMenu;
             Stone.onCollisionStick += UpdateScore;
+            
             if(PlayerPrefs.HasKey("HighScore"))
             {
                 maxScore = PlayerPrefs.GetInt("HighScore");
@@ -45,6 +44,7 @@ namespace Golf
         private void OnDisable()
         {
             Stone.onCollisionStone -= GameOver;
+            Stone.onCollisionStone -= UIcon.manageGameOverMenu;
             Stone.onCollisionStick -= UpdateScore;
 
             PlayerPrefs.SetInt("HighScore", maxScore);
@@ -55,7 +55,9 @@ namespace Golf
         {
             do
             {
+                
                 yield return new WaitForSeconds(m_delay);
+                if (isGameOver) break;
                 spawner.Spawn();
                 RefreshDelay();
             }
@@ -81,10 +83,31 @@ namespace Golf
             UIcon.setScore(score);
             UIcon.setHighScore(maxScore);
         }
-        public void  NewGame()
+        public void StartGame()
         {
+            isGameOver = false;
             score = 0;
+            UIcon.manageMainMenu();
+            StartCoroutine(SpawnStoneProc());
+        }
+        public void ReturnToMain()
+        {
+
+            UIcon.manageGameOverMenu();
+            UIcon.manageMainMenu();
+            ClearStone();
+        }
+        private void ClearStone()
+        {
+            GameObject[] stones;
+            stones = GameObject.FindGameObjectsWithTag("Stone");
+
+            foreach (GameObject stn in stones)
+            {
+                Destroy(stn);
+            }
         }
     }
 
 }
+

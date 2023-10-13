@@ -15,7 +15,9 @@ namespace Golf
             {
                 if (!other.isAfect) 
                 {
+                    this.isAfect = true;
                     onCollisionStone?.Invoke(); //?. этот объект не является null, для Unity не стоит делать
+                    
                     //if(onCollisionStone != null) onCollisionStone.Invoke(); //равносильно
                 }
                 

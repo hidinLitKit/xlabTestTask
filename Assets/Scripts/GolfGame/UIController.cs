@@ -9,6 +9,8 @@ namespace Golf
     {
         public TextMeshProUGUI scoreField;
         public TextMeshProUGUI maxScoreFiel;
+        public GameObject mainMenu;
+        public GameObject gameOver;
         public void setScore(int scr)
         {
             scoreField.text = "Score: " + scr;
@@ -17,7 +19,15 @@ namespace Golf
         {
             maxScoreFiel.text = "High Score: " + scr;
         }
-
+        public void manageMainMenu()
+        {
+            mainMenu.SetActive(!mainMenu.activeSelf);
+        }
+        public void manageGameOverMenu()
+        {
+            Debug.Log("GameOverMenu Switched");
+            gameOver.SetActive(!gameOver.activeSelf);
+        }
     }
 }
 
