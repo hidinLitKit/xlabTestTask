@@ -20,6 +20,9 @@ namespace Golf
         public float delayStep = 0.1f;
 
         public float m_delay = 0.5f;
+
+        private List<GameObject> m_stones = new List<GameObject>();
+        //ну короче в апдейте добавляем камушки а потом очищаем весь лист 
         private void Awake()
         {
             score = 0;
@@ -32,9 +35,9 @@ namespace Golf
         }
         private void OnEnable()
         {
-            Stone.onCollisionStone += GameOver;
-            Stone.onCollisionStone += UIcon.manageGameOverMenu;
-            Stone.onCollisionStick += UpdateScore;
+            GameEvents.onCollisionStone += GameOver;
+            GameEvents.onCollisionStone += UIcon.manageGameOverMenu;
+            GameEvents.onCollisionStick += UpdateScore;
             
             if(PlayerPrefs.HasKey("HighScore"))
             {
@@ -43,9 +46,9 @@ namespace Golf
         }
         private void OnDisable()
         {
-            Stone.onCollisionStone -= GameOver;
-            Stone.onCollisionStone -= UIcon.manageGameOverMenu;
-            Stone.onCollisionStick -= UpdateScore;
+            GameEvents.onCollisionStone -= GameOver;
+            GameEvents.onCollisionStone -= UIcon.manageGameOverMenu;
+            GameEvents.onCollisionStick -= UpdateScore;
 
             PlayerPrefs.SetInt("HighScore", maxScore);
 
