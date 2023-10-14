@@ -13,7 +13,7 @@ namespace Golf
             base.OnEnable();
             levelController.enabled = true;
             playerController.enabled = true;
-
+            GameEvents.GameStarted();
             GameEvents.onCollisionStone += OnGameOver;
         }
         private void OnGameOver()
