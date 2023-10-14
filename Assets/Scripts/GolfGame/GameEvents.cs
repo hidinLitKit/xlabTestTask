@@ -8,7 +8,6 @@ namespace Golf
         public static event System.Action onCollisionStone;
         public static event System.Action onCollisionStick;
         public static event System.Action onGameStarted;
-        public static event System.Action onDown;
         public static void CollisionStones(Collision collision)
         {
             onCollisionStone?.Invoke();
