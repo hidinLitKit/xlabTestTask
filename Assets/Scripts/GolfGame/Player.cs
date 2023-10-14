@@ -13,6 +13,7 @@ namespace Golf
         public float power = 20f;
         private bool m_isDown = false;
         private Vector3 m_lastPosition;
+        [SerializeField] private Animator anim;
         public void Update()
         {
             m_lastPosition = Helper.position;
@@ -25,6 +26,11 @@ namespace Golf
         public void SetDown(bool value)
         {
             m_isDown=value;
+
+        }
+        public void SetAnim()
+        {
+            anim.SetBool("isDown", m_isDown);
         }
         public void OnCollisionStick(Collider collider)
         {
