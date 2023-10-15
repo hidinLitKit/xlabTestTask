@@ -12,6 +12,8 @@ namespace Golf
             Easy, Normal, Hard
         }
         public Spawner spawner;
+        public Spawner enemySpawn1;
+        public Spawner enemySpawn2;
         public TMP_Text scoreText;
         private int score;
         private int maxScore;
@@ -37,12 +39,18 @@ namespace Golf
         }
         public void StartGame()
         {
-            StartCoroutine(SpawnStoneProc());
+            StartCoroutine(SpawnStone());
+        }
+        public void EndGame()
+        {
+            ClearWithTag("Stone");
+            ClearWithTag("Enemy");
         }
         private void OnEnable()
         {
-            GameEvents.onCollisionStick += UpdateScore;
+            GameEvents.onEnemyCollision += UpdateScore;
             GameEvents.onGameStarted += StartGame;
+            GameEvents.onGameFinished += EndGame;
             isGameOver = false;
             
             if(PlayerPrefs.HasKey("HighScore"))
@@ -54,27 +62,29 @@ namespace Golf
         }
         private void OnDisable()
         {
-            GameEvents.onCollisionStick -= UpdateScore;
+            GameEvents.onEnemyCollision -= UpdateScore;
             GameEvents.onGameStarted -= StartGame;
+            GameEvents.onGameFinished -= EndGame;
 
             PlayerPrefs.SetInt("HighScore", maxScore);
 
         }
         
-        private IEnumerator SpawnStoneProc() 
+        private IEnumerator SpawnStone() 
         {
             do
             {
                 yield return new WaitForSeconds(m_delay);
                 if (isGameOver) break;
                 spawner.Spawn();
+                enemySpawn1.Spawn();
+                enemySpawn2.Spawn();
                 RefreshDelay();
             }
             while (!isGameOver);
             
             yield return null;
         }
-
         public void RefreshDelay()
         {
             m_delay = UnityEngine.Random.Range(delayMin, delayMax);
@@ -89,14 +99,14 @@ namespace Golf
            
         }
 
-        public void ClearStones()
+        public void ClearWithTag(string tag)
         {
-            GameObject[] stones;
-            stones = GameObject.FindGameObjectsWithTag("Stone");
+            GameObject[] mass;
+            mass = GameObject.FindGameObjectsWithTag(tag);
 
-            foreach (GameObject stn in stones)
+            foreach (GameObject obj in mass)
             {
-                Destroy(stn);
+                Destroy(obj);
             }
         }
     }

@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\GolfGame\GolfStickController.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\SwitchItems.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\AttachItem.cs" />
+    <Compile Include="Assets\Scripts\GolfGame\Enemy\Skeleton.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\PickedItemProps.cs" />
     <Compile Include="Assets\Scripts\GolfGame\Stick.cs" />
     <Compile Include="Assets\Scripts\PlayerActController.cs" />
@@ -82,6 +83,8 @@
     <Compile Include="Assets\Scripts\InteractiveSystem\EndingSeq\EndEvent.cs" />
     <Compile Include="Assets\Art\3D models\AlignedGames\Polygonal Foliage Asset Package\Scripts\Utility\FlyCameraBehaviour.cs" />
     <Compile Include="Assets\Scripts\ToolChange.cs" />
+    <Compile Include="Assets\Scripts\GolfGame\BombSystem\Bomb.cs" />
+    <Compile Include="Assets\Scripts\GolfGame\BombSystem\BombExplosion.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\LetterFade.cs" />
     <Compile Include="Assets\Scripts\InteractiveSystem\Controls.cs" />
     <Compile Include="Assets\Scripts\GolfGame\States\GamePlayState.cs" />
@@ -95,15 +98,19 @@
     <Compile Include="Assets\Scripts\InteractiveSystem\ItemCanBePicked.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem\Dialogue.cs" />
     <Compile Include="Assets\Scripts\FreeCamera.cs" />
-    <Compile Include="Assets\Scripts\GolfGame\Bomb.cs" />
+    <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\GolfGame\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Art\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\Art\3D models\AlignedGames\Polygonal Foliage Asset Package\Shaders\Cloud.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -112,17 +119,23 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster FREE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -848,9 +861,29 @@
       <Project>{30AAFC6E-C952-BAB1-A6ED-E18C245B1FC5}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{C03BAA69-E327-40A3-4E9F-332390042149}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{C8C7A5B3-4368-6016-DD50-46E6A070F70A}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{EB21C6E4-50A7-A6C0-9F65-937032ADDCEF}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
       <Project>{30EA4FA3-FCD5-2B84-3C42-4C0F60521669}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{0C40FD8B-16A0-D995-F71C-5E590DBA7893}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{07A866CF-6B10-C5E0-9AB7-EA5B0965F318}</Project>
+      <Name>CFXRDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

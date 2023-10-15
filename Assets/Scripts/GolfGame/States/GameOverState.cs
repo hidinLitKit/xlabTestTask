@@ -14,7 +14,9 @@ namespace Golf
         }
         public void Restart()
         {
-            levelController.ClearStones();
+            levelController.enabled = true;
+            GameEvents.GameFinished();
+            levelController.enabled = false;
 
             Exit();
             mainMenuState.Enter();
