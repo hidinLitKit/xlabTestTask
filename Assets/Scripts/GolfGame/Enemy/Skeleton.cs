@@ -10,6 +10,7 @@ namespace Golf
         public float speed = 2f;
         private bool isStopped = false;
         public GameObject dir;
+        public AudioSource deathSound;
         private void Awake()
         {
             animator = GetComponent<Animator>();
@@ -29,20 +30,22 @@ namespace Golf
                 if (other.Type == BombExplosion.BombType.NORMAL)
                     SkeletonDies();
             }
+            if(oth.tag=="NoPass")  GameEvents.EnemyPass();
         }
         public void SkeletonDies()
         {
             animator.SetBool("IsDead", true);
             spwn.Spawn();
             isStopped = true;
-
+            deathSound.Play();
             StartCoroutine(Dissapear());
         }
         private IEnumerator Dissapear()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             Destroy(this.gameObject);
         }
+
     }
 }
 
