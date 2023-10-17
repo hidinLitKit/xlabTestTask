@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Stick
   - Stone
+  - FxTemporaire
+  - Enemy
+  - NoPass
   layers:
   - Default
   - TransparentFX

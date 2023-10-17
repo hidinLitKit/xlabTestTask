@@ -13,8 +13,9 @@ namespace Golf
             base.OnEnable();
             levelController.enabled = true;
             playerController.enabled = true;
-
+            GameEvents.GameStarted();
             GameEvents.onCollisionStone += OnGameOver;
+            GameEvents.onEnemyPass += OnGameOver;
         }
         private void OnGameOver()
         {
@@ -27,6 +28,7 @@ namespace Golf
             levelController.enabled = false;
             playerController.enabled = false;
             GameEvents.onCollisionStone -= OnGameOver;
+            GameEvents.onEnemyPass -= OnGameOver;
         }
     }
 }

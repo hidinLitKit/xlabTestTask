@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 namespace Golf
 {
     public class LevelController : MonoBehaviour
@@ -10,11 +12,13 @@ namespace Golf
             Easy, Normal, Hard
         }
         public Spawner spawner;
-        public UIController UIcon;
-        public bool isGameOver = false;
+        public Spawner enemySpawn1;
+        public Spawner enemySpawn2;
+        public TMP_Text scoreText;
         private int score;
         private int maxScore;
-        
+        public bool isGameOver = false;
+
         public float delayMax = 2f;
         public float delayMin = 0.5f;
         public float delayStep = 0.1f;
@@ -33,35 +37,48 @@ namespace Golf
             //Stone.onCollisionStone += GameOver; //подписка на метод
             //желательно это делать OnEnable, OnDisable, дл€ контрол€ подписки,отписки
         }
+        public void StartGame()
+        {
+            StartCoroutine(SpawnStone());
+        }
+        public void EndGame()
+        {
+            ClearWithTag("Stone");
+            ClearWithTag("Enemy");
+        }
         private void OnEnable()
         {
-            GameEvents.onCollisionStone += GameOver;
-            GameEvents.onCollisionStone += UIcon.manageGameOverMenu;
-            GameEvents.onCollisionStick += UpdateScore;
+            GameEvents.onEnemyCollision += UpdateScore;
+            GameEvents.onGameStarted += StartGame;
+            GameEvents.onGameFinished += EndGame;
+            isGameOver = false;
             
             if(PlayerPrefs.HasKey("HighScore"))
             {
                 maxScore = PlayerPrefs.GetInt("HighScore");
             }
+            score = 0;
+            
         }
         private void OnDisable()
         {
-            GameEvents.onCollisionStone -= GameOver;
-            GameEvents.onCollisionStone -= UIcon.manageGameOverMenu;
-            GameEvents.onCollisionStick -= UpdateScore;
+            GameEvents.onEnemyCollision -= UpdateScore;
+            GameEvents.onGameStarted -= StartGame;
+            GameEvents.onGameFinished -= EndGame;
 
             PlayerPrefs.SetInt("HighScore", maxScore);
 
         }
         
-        private IEnumerator SpawnStoneProc() 
+        private IEnumerator SpawnStone() 
         {
             do
             {
-                
                 yield return new WaitForSeconds(m_delay);
                 if (isGameOver) break;
                 spawner.Spawn();
+                enemySpawn1.Spawn();
+                enemySpawn2.Spawn();
                 RefreshDelay();
             }
             while (!isGameOver);
@@ -74,40 +91,22 @@ namespace Golf
             delayMax = Mathf.Max(delayMin, delayMax - delayStep);   
         }
 
-        private void GameOver()
-        {
-            Debug.Log("!Gameover");
-            isGameOver = true;
-        }
-        private void UpdateScore()
+        public void UpdateScore()
         {
             score++;
             if(score>maxScore) maxScore = score;
-            UIcon.setScore(score);
-            UIcon.setHighScore(maxScore);
+            scoreText.text = $"—чЄт: {score}";
+           
         }
-        public void StartGame()
-        {
-            isGameOver = false;
-            score = 0;
-            UIcon.manageMainMenu();
-            StartCoroutine(SpawnStoneProc());
-        }
-        public void ReturnToMain()
-        {
 
-            UIcon.manageGameOverMenu();
-            UIcon.manageMainMenu();
-            ClearStone();
-        }
-        private void ClearStone()
+        public void ClearWithTag(string tag)
         {
-            GameObject[] stones;
-            stones = GameObject.FindGameObjectsWithTag("Stone");
+            GameObject[] mass;
+            mass = GameObject.FindGameObjectsWithTag(tag);
 
-            foreach (GameObject stn in stones)
+            foreach (GameObject obj in mass)
             {
-                Destroy(stn);
+                Destroy(obj);
             }
         }
     }

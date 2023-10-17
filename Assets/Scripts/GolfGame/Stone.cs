@@ -22,10 +22,6 @@ namespace Golf
                 }
                 
             }
-            //if (collision.gameObject.tag == "Stick")
-            //{
-            //   GameEvents.CollisionStick();
-            //}
         }
     }
 
