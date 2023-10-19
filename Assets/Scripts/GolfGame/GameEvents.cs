@@ -11,6 +11,7 @@ namespace Golf
         public static event System.Action onGameFinished;
         public static event System.Action onEnemyCollision;
         public static event System.Action onEnemyPass;
+        public static event System.Action<int> onComboHit;
         public static void CollisionStones(Collision collision)
         {
             onCollisionStone?.Invoke();
@@ -34,6 +35,10 @@ namespace Golf
         public static void EnemyPass()
         {
             onEnemyPass?.Invoke();
+        }
+        public static void Combo(int i)
+        {
+            onComboHit?.Invoke(i);
         }
     }
     

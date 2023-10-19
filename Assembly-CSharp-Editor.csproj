@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F083F6E1-363A-CDF9-0B15-E9B202EAACD4}</ProjectGuid>
+    <ProjectGuid>{AE20E0D1-1A41-D0A4-95BF-F72C7664F6EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -814,43 +814,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{0574690E-44AA-D48A-8D27-1A4127ADC207}</Project>
+      <Project>{004A1862-673D-2917-F9BF-6659315B165F}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{1E3D2FE9-47A0-3E1D-2680-3B22F9E62FAC}</Project>
+      <Project>{FA1A5799-2085-F644-EBD6-3CD9E62F2E71}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{5C7E736F-7F69-B820-1BA3-220C0C1C0D30}</Project>
+      <Project>{AB32F50B-6F88-76CD-8AC9-29694FB8A65C}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{386B5737-B539-DEB7-19A8-23A5233127FC}</Project>
+      <Project>{30AAFC6E-C952-BAB1-A6ED-E18C245B1FC5}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{F2B12C25-377B-A6ED-A73F-494B830E2BF1}</Project>
+      <Project>{C03BAA69-E327-40A3-4E9F-332390042149}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{0D78157C-7CFD-8E5E-9279-5267A1CA9164}</Project>
+      <Project>{C8C7A5B3-4368-6016-DD50-46E6A070F70A}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{8ED81419-FE0C-B5AF-8611-BF6DCC7DDD2E}</Project>
+      <Project>{EB21C6E4-50A7-A6C0-9F65-937032ADDCEF}</Project>
       <Name>CFXRRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{A947D129-291B-3E35-5AA0-4A69F6C4D722}</Project>
+      <Project>{30EA4FA3-FCD5-2B84-3C42-4C0F60521669}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
-      <Project>{4A11EAB5-D170-B0F3-AA4C-E8D89DD54F31}</Project>
+      <Project>{0C40FD8B-16A0-D995-F71C-5E590DBA7893}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
-      <Project>{2683E542-C594-9217-D282-AAEE778DCCA4}</Project>
+      <Project>{07A866CF-6B10-C5E0-9AB7-EA5B0965F318}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
   </ItemGroup>

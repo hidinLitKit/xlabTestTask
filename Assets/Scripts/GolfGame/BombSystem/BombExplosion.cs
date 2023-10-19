@@ -10,12 +10,12 @@ namespace Golf
         {
             NORMAL, FREEZE
         }
-        [SerializeField] public BombType Type
+         public BombType Type
         {
             set { this.m_Type = Type; }
             get { return m_Type; }
         }
-        private BombType m_Type;
+        [SerializeField] private BombType m_Type;
         private void Awake()
         {
                 

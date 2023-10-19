@@ -17,6 +17,7 @@ namespace Golf
         public TMP_Text scoreText;
         private int score;
         private int maxScore;
+        private int isMxScoreBeaten = 0;
         public bool isGameOver = false;
 
         public float delayMax = 2f;
@@ -31,6 +32,7 @@ namespace Golf
         {
             score = 0;
             maxScore = 0;
+            isMxScoreBeaten = 0;
         }
         void Start()
         {
@@ -48,7 +50,8 @@ namespace Golf
         }
         private void OnEnable()
         {
-            GameEvents.onEnemyCollision += UpdateScore;
+            GameEvents.onEnemyCollision += EnemyScore;
+            GameEvents.onComboHit += BonusScore;
             GameEvents.onGameStarted += StartGame;
             GameEvents.onGameFinished += EndGame;
             isGameOver = false;
@@ -58,15 +61,18 @@ namespace Golf
                 maxScore = PlayerPrefs.GetInt("HighScore");
             }
             score = 0;
-            
+            PlayerPrefs.SetInt("HighScoreBeaten", isMxScoreBeaten);
+
         }
         private void OnDisable()
         {
-            GameEvents.onEnemyCollision -= UpdateScore;
+            GameEvents.onEnemyCollision -= EnemyScore;
+            GameEvents.onComboHit -= BonusScore;
             GameEvents.onGameStarted -= StartGame;
             GameEvents.onGameFinished -= EndGame;
 
             PlayerPrefs.SetInt("HighScore", maxScore);
+            PlayerPrefs.SetInt("HighScoreBeaten", isMxScoreBeaten);
 
         }
         
@@ -91,14 +97,26 @@ namespace Golf
             delayMax = Mathf.Max(delayMin, delayMax - delayStep);   
         }
 
-        public void UpdateScore()
+        public void EnemyScore()
         {
             score++;
-            if(score>maxScore) maxScore = score;
-            scoreText.text = $"Ñ÷¸ò: {score}";
-           
+            UpdateScore();
         }
+        public void BonusScore(int x)
+        {
+            score += x;
+            UpdateScore();
+        }
+        public void UpdateScore()
+        {
+            if (score > maxScore)
+            {
+                maxScore = score;
+                isMxScoreBeaten = 1;
+            }
+            scoreText.text = $": {score}";
 
+        }
         public void ClearWithTag(string tag)
         {
             GameObject[] mass;

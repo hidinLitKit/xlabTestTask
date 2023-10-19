@@ -99,9 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b384320c0aaa723469eb41ea97b98846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   dir: {fileID: 6427871611545638968}
   deathSound: {fileID: -1627238332108073622}
+  freezeFx: {fileID: 8433079331162208932, guid: e22d3b3021af49a41837827126a7d01f, type: 3}
+  IceCube: {fileID: 8324502928995686713, guid: 5083a5c13372cc6449508f73ab5aa562, type: 3}
 --- !u!114 &7928358374453805693
 MonoBehaviour:
   m_ObjectHideFlags: 0

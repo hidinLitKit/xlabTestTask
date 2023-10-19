@@ -10,6 +10,7 @@ namespace Golf
     {
         public LevelController levelController;
         public TMP_Text highScore;
+        public GameObject HighScoreBeaten;
         public GameState gameplayState;
         public void PlayGame()
         {
@@ -19,8 +20,12 @@ namespace Golf
         protected override void OnEnable()
         {
             base.OnEnable();
-
-            if(PlayerPrefs.HasKey("HighScore")) highScore.text = $" Ћучший счЄт : {PlayerPrefs.GetInt("HighScore")}";
+            if(PlayerPrefs.HasKey("HighScore")) highScore.text = $"{PlayerPrefs.GetInt("HighScore")}";
+            if (PlayerPrefs.HasKey("HighScoreBeaten") && PlayerPrefs.GetInt("HighScoreBeaten") == 1)
+            {
+                HighScoreBeaten.SetActive(true);
+                PlayerPrefs.SetInt("HighScoreBeaten", 0);
+            }
         }
     }
 }

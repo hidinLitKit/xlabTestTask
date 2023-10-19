@@ -936,6 +936,8 @@ MonoBehaviour:
   speed: 1
   dir: {fileID: 8073301241963688114}
   deathSound: {fileID: -6555395356923005031}
+  freezeFx: {fileID: 8433079331162208932, guid: e22d3b3021af49a41837827126a7d01f, type: 3}
+  IceCube: {fileID: 8324502928995686713, guid: 5083a5c13372cc6449508f73ab5aa562, type: 3}
 --- !u!114 &3804870191906115991
 MonoBehaviour:
   m_ObjectHideFlags: 0

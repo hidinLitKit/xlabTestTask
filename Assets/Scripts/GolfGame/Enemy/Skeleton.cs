@@ -11,6 +11,8 @@ namespace Golf
         private bool isStopped = false;
         public GameObject dir;
         public AudioSource deathSound;
+        public GameObject freezeFx;
+        public GameObject IceCube;
         private void Awake()
         {
             animator = GetComponent<Animator>();
@@ -29,11 +31,14 @@ namespace Golf
                 Debug.Log("Взрыв");
                 if (other.Type == BombExplosion.BombType.NORMAL)
                     SkeletonDies();
+                if (other.Type == BombExplosion.BombType.FREEZE)
+                    StartCoroutine(SkeletonFrozen());
             }
             if(oth.tag=="NoPass")  GameEvents.EnemyPass();
         }
         public void SkeletonDies()
         {
+            GetComponent<Collider>().enabled = false;
             animator.SetBool("IsDead", true);
             spwn.Spawn();
             isStopped = true;
@@ -45,7 +50,15 @@ namespace Golf
             yield return new WaitForSeconds(1f);
             Destroy(this.gameObject);
         }
-
+        private IEnumerator SkeletonFrozen()
+        {
+            GameObject inst = Instantiate(IceCube, this.transform.position, this.transform.rotation);
+            Instantiate(freezeFx, this.transform.position, this.transform.rotation);
+            isStopped = true;
+            yield return new WaitForSeconds(1.25f);
+            isStopped = false;
+            Destroy(inst);
+        }
     }
 }
 
