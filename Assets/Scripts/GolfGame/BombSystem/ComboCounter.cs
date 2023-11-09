@@ -29,8 +29,8 @@ namespace Golf
                 string newStr = $"COMBO! +{collCount}";
                 Debug.Log(newStr);
 
-                GameObject particleInst = Instantiate(particle, this.transform.position, this.transform.rotation);
-                 particleInst.GetComponent<CFXR_ParticleText>().UpdateText(newStr);
+                //GameObject particleInst = Instantiate(particle, this.transform.position, this.transform.rotation);
+                 //particleInst.GetComponent<CFXR_ParticleText>().UpdateText(newStr);
                 Debug.Log(collCount);
             }
         }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 namespace Golf
 {
     public class LevelController : MonoBehaviour
     {
+        [SerializeField] private string YandexLBName;
         private enum GameDifficulty
         {
             Easy, Normal, Hard
@@ -55,13 +57,17 @@ namespace Golf
             GameEvents.onGameStarted += StartGame;
             GameEvents.onGameFinished += EndGame;
             isGameOver = false;
-            
-            if(PlayerPrefs.HasKey("HighScore"))
-            {
-                maxScore = PlayerPrefs.GetInt("HighScore");
-            }
+            delayMax = 2f;
+
+            //if(PlayerPrefs.HasKey("HighScore"))
+            //{
+            //    maxScore = PlayerPrefs.GetInt("HighScore");    
+            //}
+            maxScore = YandexGame.savesData.HighScore;
             score = 0;
+            UpdateScore();
             PlayerPrefs.SetInt("HighScoreBeaten", isMxScoreBeaten);
+            
 
         }
         private void OnDisable()
@@ -71,6 +77,9 @@ namespace Golf
             GameEvents.onGameStarted -= StartGame;
             GameEvents.onGameFinished -= EndGame;
 
+            
+            YandexGame.savesData.HighScore = maxScore;
+            YandexGame.SaveProgress();
             PlayerPrefs.SetInt("HighScore", maxScore);
             PlayerPrefs.SetInt("HighScoreBeaten", isMxScoreBeaten);
 
@@ -78,7 +87,8 @@ namespace Golf
         
         private IEnumerator SpawnStone() 
         {
-            do
+            while(!isGameOver)
+            
             {
                 yield return new WaitForSeconds(m_delay);
                 if (isGameOver) break;
@@ -87,7 +97,7 @@ namespace Golf
                 enemySpawn2.Spawn();
                 RefreshDelay();
             }
-            while (!isGameOver);
+
             
             yield return null;
         }
@@ -113,10 +123,18 @@ namespace Golf
             {
                 maxScore = score;
                 isMxScoreBeaten = 1;
+                YandexGame.NewLeaderboardScores(YandexLBName, maxScore);
             }
             scoreText.text = $": {score}";
 
+
         }
+
+        private void TrySaveHighScore()
+        {
+
+        }
+
         public void ClearWithTag(string tag)
         {
             GameObject[] mass;

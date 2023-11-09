@@ -11,13 +11,15 @@ namespace Golf
         {
             base.OnEnable();
             levelController.isGameOver = true;
+            
         }
         public void Restart()
         {
             levelController.enabled = true;
+            levelController.StopAllCoroutines();
             GameEvents.GameFinished();
             levelController.enabled = false;
-
+            YGAdsProvider.TryFullScreenAdWithChance(100);
             Exit();
             mainMenuState.Enter();
         }

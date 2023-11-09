@@ -6,9 +6,11 @@ namespace Golf
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private Player player;
+        private bool isDown = false;
         private void Start()
         {
             if(player == null) { Debug.Log("player==null"); }
+            OnUp();
         }
         private void Update()
         {
@@ -24,6 +26,12 @@ namespace Golf
             player.SetDown(false);
             player.SetAnim();
 
+        }
+        public void onClick()
+        {
+            isDown = !isDown;
+            player.SetDown(isDown);
+            player.SetAnim();
         }
 
     }
